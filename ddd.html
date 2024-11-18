@@ -1,0 +1,53 @@
+<head>
+  <script>
+    document.addEventListener("DOMContentLoaded", () =>
+      console.log("DOMContentLoaded")
+    );
+  </script>
+</head>
+<body>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+  <script>
+    for (const div of document.querySelectorAll("div")) {
+      console.log(div);
+    }
+
+    let i = 1000,
+      div,
+      divs = [],
+      ids = [];
+    while (i--) {
+      div = document.createElement("div");
+      div.textContent = new Date().toISOString();
+      document.body.appendChild(div);
+      if (!(i % 100)) {
+        const id = { id: i };
+        ids.push(id);
+        divs.push(div);
+        console.log(id, { div }, div);
+      }
+    }
+    setTimeout(() => {
+      for (const id of ids) id.id = Math.random();
+
+      for (const div of divs) {
+        div.style.color = "red";
+        const child = document.createElement("div");
+        child.textContent = "OK";
+        div.appendChild(child);
+      }
+    }, 1000);
+  </script>
+</body>

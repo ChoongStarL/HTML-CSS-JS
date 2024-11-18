@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test background-attachment</title>
+  <style>
+    body {
+      height: 2000px; /* 전체 페이지 스크롤을 위해 높이 증가 */
+    }
+    .parent {
+      width: 300px;
+      height: 200px;
+      overflow: auto;
+      border: 2px solid black;
+    }
+    .children {
+      height: 1000px;
+      background-image: url('images/coffee.jpg');
+      background-attachment: local; /* 'scroll'로 변경하며 테스트 */
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="children">
+      <p>내용이 많은 상태로 설정하여 내부 스크롤 가능</p>
+      <p>추가 텍스트 추가</p>
+      <p>추가 텍스트 추가</p>
+      <p>추가 텍스트 추가</p>
+      <p>추가 텍스트 추가</p>
+      <p>추가 텍스트 추가</p>
+      <p>추가 텍스트 추가</p>
+    </div>
+  </div>
+</body>
+</html>

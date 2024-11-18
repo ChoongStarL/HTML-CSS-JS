@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background-attachment-fixed</title>
+  <style>
+    body{
+      height:1000px;
+    }
+   
+    .children{
+      height:400px;
+      width: 400px;
+      background-image:url('images/coffee.jpg');
+      background-attachment:scroll;
+      overflow: auto;
+      text-align:  center;
+      display: inline-block;
+      line-height: 100px;
+
+    }
+    .children span{
+        background: white;
+        border-radius: 5px;
+        padding: 10px;
+    }
+  </style>
+</head>
+<body>
+ 
+    <div class="children">
+        <span>ddddd</span><br>
+        <span>ddddd2</span><br>
+        <span>ddddd3</span><br>
+        <span>ddddd4</span><br>
+        <span>ddddd5</span><br>
+        <span>ddddd6</span>
+        
+
+
+    </div>
+  
+</body>
+</html>
